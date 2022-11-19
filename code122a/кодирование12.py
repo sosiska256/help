@@ -137,32 +137,26 @@ if q == '2':
     K - Количество символов в сообщении
     i - Информационный вес символа (в битах)
     N - Мощность алфавита''')
-                I = int(input('I = '))
-                K = int(input('K = '))
-                i = int(input('i = '))
-                N = int(input('N = '))
+                I = input('I = ')
+                K = input('K = ')
+                i = input('i = ')
+                N = input('N = ')
                     
                 if i == '' and N != '':
-                    i = math.log2(N)
+                    i = math.log2(int(N))
                     print(f'i = {i}')
                 elif i == '' and K != '' and I != '':
-                    i = I / K
+                    i = int(I) / int(K)
                     print(f'i = {i}')
-                else:
-                    print('Ошибка')
                     
                 if I == '':
-                    print(f'I = {K * i}')
-                else:
-                    print('Ошибка')
+                    print(f'I = {int(K) * int(i)}')
                         
                 if K == '':
-                    print(f'K = {I / i}')
-                else:
-                    print('Ошибка')
+                    print(f'K = {int(I) / int(i)}')
                     
                 if N == '':
-                    print(f'N = {2^i}')
+                    print(f'N = {2**int(i)}')
                         
                         
             case '2':
@@ -173,26 +167,26 @@ if q == '2':
     M - Частота дискретизации звука
     t - Длительность звучания файла (в секундах)
     k - Количество каналов звучания''')
-                V = int(input('V = '))
-                I = int(input('I = '))
-                M = int(input('M = '))
-                t = int(input('t = '))
-                k = int(input('k = '))
+                V = input('V = ')
+                I = input('I = ')
+                M = input('M = ')
+                t = input('t = ')
+                k = input('k = ')
 
                 if V == '':
-                    print(f'V = {I * M * t * k}')
+                    print(f'V = {int(I) * int(M) * int(t) * int(k)}')
 
                 if I == '':
-                    print(f'I = {V / (M * t * k)}')
+                    print(f'I = {int(V) / (int(M) * int(t) * int(k))}')
 
                 if M == '':
-                    print(f'M = {V / (I * t * k)}')
+                    print(f'M = {int(V) / (int(I) * int(t) * int(k))}')
 
                 if t == '':
-                    print(f't = {V / (I * M * k)}')
+                    print(f't = {int(V) / (int(I) * int(M) * int(k))}')
 
                 if k == '':
-                    print(f'M = {V / (I * M * t)}')
+                    print(f'M = {int(V) / (int(I) * int(M) * int(t))}')
 
 
             case '3':
@@ -202,19 +196,19 @@ I - Информационный объём (в битах)
 i - Глубина цвета (в битах)
 X - Ширина изображения (в пикселях)
 Y - Высота изображения (в пикселях)''')
-                I = int(input('I = '))
-                i = int(input('i = '))
-                X = int(input('X = '))
-                Y = int(input('Y = '))
+                I = input('I = ')
+                i = input('i = ')
+                X = input('X = ')
+                Y = input('Y = ')
 
                 if I == '':
-                    print(f'I = {i * X * Y}')
+                    print(f'I = {int(i) * int(X) * int(Y)}')
 
                 if i == '':
-                    print(f'i = {I / (X * Y)}')
+                    print(f'i = {int(I) / (int(X) * int(Y))}')
 
                 if X == '':
-                    print(f'X = {I / (i * Y)}')
+                    print(f'X = {int(I) / (int(i) * int(Y))}')
 
                 if Y == '':
-                    print(f'Y = {I / (i * X)}')
+                    print(f'Y = {int(I) / (int(i) * int(X))}')
