@@ -15,15 +15,15 @@ def f10():
             if choise == 3:
                 i = int(input('Введите значение в битах: '))
             if choise == 4:
-                N = int(input('Введите значение в битах: '))
+                N = int(input('Введите значение: '))
         to_find = int(input("Выберите номер того, что нужно найти: \n1) I - информационный объём текста \n2) К - количество символов в тексте \n3) i - информационный вес одного символа \n4) N - мощность алфавита \nВаш выбор: "))
         if to_find == 1:
             if i > 0 and K > 0:
                 I = K*i 
-                print(f"I = {I} бит")
+                print(f"I = {int(I)} бит = {I/8} байт = {I/8192} Кб")
             elif K > 0 and N > 0:
                 I = K*math.log2(N)
-                print(f"I = {I} бит")
+                print(f"I = {int(I)} бит = {I/8} байт = {I/8192} Кб")
             else:
                 print("Недостаточно данных")
         if to_find == 2:
@@ -32,19 +32,19 @@ def f10():
         if to_find == 3:
             if N > 0:
                 i = math.log2(N)
-                print(f"i = {i} бит")
+                print(f"i = {int(i)} бит")
             elif K > 0 and I > 0:
-                i = I/K
-                print(f"i = {i} бит")
+                i = int(I/K)
+                print(f"i = {int(i)} бит")
             else:
                 print("Недостаточно данных")
         if to_find == 4:
             if i > 0:
                 N = 2**i
-                print(f"N = {N} бит")
+                print(f"N = {N}")
             elif I > 0 and K > 0:
                 N = 2**(I/K)
-                print(f"N = {N} бит")
+                print(f"N = {N}")
             else:
                 print("Недостаточно данных")
 
@@ -70,7 +70,7 @@ def f10():
             print(f"H = {H} Гц")
         if to_find == 2:
             I = H*t*b
-            print(f"I = {I} байт")
+            print(f"I = {I} байт = {I/1024} Кб")
         if to_find == 3:
             t = I/(H*b)
             print(f"t = {t} секунд")
@@ -103,15 +103,15 @@ def f10():
                 b = math.log2(K)
             elif I > 0:
                 b = I/(x*y)
-            print(f"b = {b} бит")
+            print(f"b = {int(b)} бит")
         if to_find == 2:
             I = y*x*b
-            print(f"I = {I} бит")
+            print(f"I = {int(I)} бит = {I/8} байт = {I/8192} Кб")
         if to_find == 3:
             K = 2**b
             print(f"K = {K} ")
 
-    prob = int(input("Выберете  номер типа задачи: \n1. задача на информацию \n2. задача на звук \n3. задача на кодирование изображения \nВаш выбор: "))
+    prob = int(input("Выберете номер типа задачи: \n1. задача на информацию \n2. задача на звук \n3. задача на кодирование изображения \nВаш выбор: "))
     if prob == 1:
         inf()
     elif prob == 2:
@@ -120,4 +120,3 @@ def f10():
         image()
 
 f10()
-
