@@ -45,7 +45,7 @@ def reshulya():
         k = int(input("кол-во каналов(моно = 1, стерео = 2)"))
         if k != 2:
             k = 1
-        if N != int("") and i == int(""):
+        if N != 0 and i == 0:
             while N > 0:
                 N = N // 2
                 i = i + 1
