@@ -1,10 +1,8 @@
-def f12():
-
-    import math
+import math
         
-    q = input('Напиште номер типа задачи: \n1. Выбор неизвестного\n2. Выбор известного')
+q = input('Напиште номер типа задачи: \n1. Выбор неизвестного\n2. Выбор известного\n')
 
-    if q == '1':
+if q == '1':
         def text():
             print('''
     I = K * i
@@ -18,24 +16,24 @@ def f12():
 
             match ans:
                 case 'I':
-                    K = input('K = ')
-                    i = input('i = ')
+                    K = int(input('K = '))
+                    i = int(input('i = '))
                     print(f'I = {K * i}')
 
                 case 'K':
-                    I = input('I = ')
-                    i = input('i = ')
+                    I = int(input('I = '))
+                    i = int(input('i = '))
                     print(f'K = {I / i}')
                 case 'i':
-                    N = input('N = ')
+                    N = int(input('N = '))
                     if N == '':
-                        I = input('I = ')
-                        K = input('K = ')
+                        I = int(input('I = '))
+                        K = int(input('K = '))
                         print(f'i = {I / K}')
                     else:
                         print(f'i = {math.log2(N)}')
                 case 'N':
-                    i = input('i = ')
+                    i = int(input('i = '))
                     print(f'N = {2**i}')
 
         def sound():
@@ -50,38 +48,38 @@ def f12():
 
             match ans:
                 case 'V':
-                    I = input('I = ')
-                    M = input('M = ')
-                    t = input('t = ')
-                    k = input('k = ')
+                    I = int(input('I = '))
+                    M = int(input('M = '))
+                    t = int(input('t = '))
+                    k = int(input('k = '))
                     print(f'V = {I * M * t * k}')
 
                 case 'I':
-                    V = input('V = ')
-                    M = input('M = ')
-                    t = input('t = ')
-                    k = input('k = ')
+                    V = int(input('V = '))
+                    M = int(input('M = '))
+                    t = int(input('t = '))
+                    k = int(input('k = '))
                     print(f'I = {V / (M * t * k)}')
 
                 case 'M':
-                    V = input('V = ')
-                    I = input('I = ')
-                    t = input('t = ')
-                    k = input('k = ')
+                    V = int(input('V = '))
+                    I = int(input('I = '))
+                    t = int(input('t = '))
+                    k = int(input('k = '))
                     print(f'M = {V / (I * t * k)}')
 
                 case 't':
-                    V = input('V = ')
-                    M = input('M = ')
-                    I = input('I = ')
-                    k = input('k = ')
+                    V = int(input('V = '))
+                    M = int(input('M = '))
+                    I = int(input('I = '))
+                    k = int(input('k = '))
                     print(f't = {V / (I * M * k)}')
 
                 case 'k':
-                    V = input('V = ')
-                    M = input('M = ')
-                    I = input('I = ')
-                    t = input('t = ')
+                    V = int(input('V = '))
+                    M = int(input('M = '))
+                    I = int(input('I = '))
+                    t = int(input('t = '))
                     print(f'k = {V / (I * M * t)}')
 
         def picture():
@@ -95,31 +93,32 @@ def f12():
 
             match ans:
                 case 'I':
-                    i = input('i = ')
-                    X = input('X = ')
-                    Y = input('Y = ')
+                    i = int(input('i = '))
+                    X = int(input('X = '))
+                    Y = int(input('Y = '))
                     print(f'I = {i * X * Y}')
 
                 case 'i':
-                    I = input('I = ')
-                    X = input('X = ')
-                    Y = input('Y = ')
+                    I = int(input('I = '))
+                    X = int(input('X = '))
+                    Y = int(input('Y = '))
                     print(f'i = {I / (X * Y)}')
 
                 case 'X':
-                    I = input('I = ')
-                    i = input('i = ')
-                    Y = input('Y = ')
+                    I = int(input('I = '))
+                    i = int(input('i = '))
+                    Y = int(input('Y = '))
                     print(f'i = {I / (i * Y)}')
 
                 case 'Y':
-                    I = input('I = ')
-                    i = input('i = ')
-                    X = input('X = ')
+                    I = int(input('I = '))
+                    i = int(input('i = '))
+                    X = int(input('X = '))
                     print(f'i = {I / (i * X)}')
 
             A = input('Тип задачи: \n1. Текстовая информация \n2. Звуковая информация \n3. Графическая информация')
     
+        A = input('Тип задачи: \n1. Текстовая информация \n2. Звуковая информация \n3. Графическая информация\n')
         match A:
             case '1':
                 text()
@@ -128,10 +127,10 @@ def f12():
             case '3':
                 picture()
             
-    if q == '2':    
-        A = input('Тип задачи: \n1. Текстовая информация \n2. Звуковая информация \n3. Графическая информация')
-        print('Если значение отсутствует, нажмите Enter')
-        match A:
+if q == '2':    
+    A = input('Тип задачи: \n1. Текстовая информация \n2. Звуковая информация \n3. Графическая информация\n')
+    print('Если значение отсутствует, нажмите Enter')
+    match A:
             case '1':   
                 print('''
     I = K * i
@@ -140,10 +139,10 @@ def f12():
     K - Количество символов в сообщении
     i - Информационный вес символа (в битах)
     N - Мощность алфавита''')
-                I = input('I = ')
-                K = input('K = ')
-                i = input('i = ')
-                N = input('N = ')
+                I = int(input('I = '))
+                K = int(input('K = '))
+                i = int(input('i = '))
+                N = int(input('N = '))
                     
                 if i == '' and N != '':
                     i = math.log2(N)
@@ -176,11 +175,11 @@ def f12():
     M - Частота дискретизации звука
     t - Длительность звучания файла (в секундах)
     k - Количество каналов звучания''')
-                V = input('V = ')
-                I = input('I = ')
-                M = input('M = ')
-                t = input('t = ')
-                k = input('k = ')
+                V = int(input('V = '))
+                I = int(input('I = '))
+                M = int(input('M = '))
+                t = int(input('t = '))
+                k = int(input('k = '))
 
                 if V == '':
                     print(f'V = {I * M * t * k}')
@@ -205,10 +204,10 @@ I - Информационный объём (в битах)
 i - Глубина цвета (в битах)
 X - Ширина изображения (в пикселях)
 Y - Высота изображения (в пикселях)''')
-                I = input('I = ')
-                i = input('i = ')
-                X = input('X = ')
-                Y = input('Y = ')
+                I = int(input('I = '))
+                i = int(input('i = '))
+                X = int(input('X = '))
+                Y = int(input('Y = '))
 
                 if I == '':
                     print(f'I = {i * X * Y}')
