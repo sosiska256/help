@@ -56,7 +56,7 @@ def f0():
             exit()
         
     def menu21_resh(V,p,i,N,sel):
-        print(V,p,i,sel)
+        #print(V,p,i,sel)
         otvet=0
         if sel==1:
             if p>0 and i>0:
